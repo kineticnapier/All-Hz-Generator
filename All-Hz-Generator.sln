@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "All-Hz-Generator", "All-Hz-Generator\All-Hz-Generator.csproj", "{00CC998D-F550-4EA1-9DB7-970BE8F0FBBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00CC998D-F550-4EA1-9DB7-970BE8F0FBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00CC998D-F550-4EA1-9DB7-970BE8F0FBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00CC998D-F550-4EA1-9DB7-970BE8F0FBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00CC998D-F550-4EA1-9DB7-970BE8F0FBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C40C4C75-7EA5-4BB8-9484-4C32FED16574}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,69 @@
+﻿<Window x:Class="All_Hz_Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="480" Width="800" ResizeMode="CanResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- 説明テキスト -->
+            <RowDefinition Height="*"/>
+            <!-- メイン入力 -->
+            <RowDefinition Height="Auto"/>
+            <!-- 休符入力 -->
+            <RowDefinition Height="Auto"/>
+            <!-- BPM入力 -->
+            <RowDefinition Height="Auto"/>
+            <!-- ボタン -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- 左側 -->
+            <ColumnDefinition Width="*"/>
+            <!-- 右側 -->
+        </Grid.ColumnDefinitions>
+
+        <!-- 説明文 -->
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap"
+                   Text="左のテキストボックスに音階または周波数を改行ごとに一つ入力、右のテキストボックスに拍数(四分音符=1)を入力"/>
+
+        <!-- 周波数入力 -->
+        <RichTextBox Grid.Row="1" Grid.Column="0" Name="freqinput" Margin="5">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Enter frequency here..."/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+        <!-- 拍数入力 -->
+        <RichTextBox Grid.Row="1" Grid.Column="1" Name="beatinput" Margin="5">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Enter beats here..."/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+        <!-- 休符入力 -->
+        <TextBox Grid.Row="2" Grid.Column="0" Name="restinput" Text="Enter rest seconds here..." Margin="5" Height="30"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="左のテキストボックスに音の後に挟む休符の長さを入力" Margin="5" VerticalAlignment="Center"/>
+
+        <!-- BPM入力 -->
+        <TextBox Grid.Row="3" Grid.Column="0" Name="songbpminput" Text="Enter song BPM here..." Margin="5" Height="30"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="左のテキストボックスに曲のBPMを入力" Margin="5" VerticalAlignment="Center"/>
+
+        <!-- ボタン -->
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Content="タイル数、BPM、休符のBPMを計算する"
+                Margin="5" Height="50" Click="Button_Click"/>
+    </Grid>
+</Window>
